@@ -24,6 +24,7 @@ namespace Component.Matching.Services
 
         protected int GetEditDistance(string name, string anotherName) =>
             GetDamerauLevenshteinDistance(name.Trim().ToLower(), anotherName.Trim().ToLower());
+
         private int GetDamerauLevenshteinDistance(string name, string anotherName)
         {
             var bounds = new { Height = name.Length + 1, Width = anotherName.Length + 1 };
